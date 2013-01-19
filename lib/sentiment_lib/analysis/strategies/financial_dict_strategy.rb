@@ -47,12 +47,12 @@ module SentimentLib
 
           while (line = positive_word_file.gets)
             tokens = line.chomp.split(",")
-            @@mappings[tokens[0].downcase] = 1.0
+            @@mappings[tokens[0].downcase.stem] = 1.0
           end
 
           while (line = negative_word_file.gets)
             tokens = line.chomp.split(",")
-            @@mappings[tokens[0].downcase] = -1.0
+            @@mappings[tokens[0].downcase.stem] = -1.0
           end            
 
           [positive_word_file, negative_word_file].map &:close

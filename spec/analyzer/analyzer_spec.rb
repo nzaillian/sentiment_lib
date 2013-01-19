@@ -13,6 +13,6 @@ describe ::SentimentLib::Analyzer do
 
   it "should correctly evaluate a test string with the BasicDictStrategy" do
     a = SentimentLib::Analyzer.new(:strategy => ::SentimentLib::Analysis::Strategies::BasicDictStrategy.new)
-    a.analyze("Tom is righteous and idealistic.").should == 1.5625
+    a.analyze("Tom is righteous and idealistic.").should == 1.0625
   end    
 end

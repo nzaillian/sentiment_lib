@@ -11,7 +11,9 @@ Gem::Specification.new do |gem|
   gem.description   = %q{A simple and extensible sentiment analysis gem.}
   gem.summary       = %q{Simple sentiment analysis.}
   gem.homepage      = "https://github.com/nzaillian/sentiment_lib"
+
   gem.add_dependency('rspec', '>= 2')
+  gem.add_dependency('stemmer', '>= 1')
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

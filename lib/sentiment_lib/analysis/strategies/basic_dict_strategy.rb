@@ -46,7 +46,7 @@ module SentimentLib
 
           while (line = word_file.gets)
             tokens = line.chomp.split("\t")
-            @@mappings[tokens[1]] = tokens[0].to_f
+            @@mappings[tokens[1].stem] = tokens[0].to_f
           end
 
           word_file.close

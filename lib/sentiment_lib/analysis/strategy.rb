@@ -7,7 +7,7 @@ module SentimentLib
       end
 
       def tokenize(str)
-        str.split
+        str.split.map(&:stem)
       end 
 
       # default weight is an average of per-word
