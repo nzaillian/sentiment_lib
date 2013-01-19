@@ -1,6 +1,6 @@
 # SentimentLib
 
-A simple, extensible sentiment analysis Gem.
+A simple, extensible sentiment analysis gem.
 
 ## Installation
 
@@ -20,20 +20,21 @@ Or install it yourself as:
 
 SentimentLib exposes simple sentiment analysis via SentimentLib::Analyzer.
 
-example usage: 
+example usage --
 
-  analyzer = SentimentLib::Analyzer.new
+    analyzer = SentimentLib::Analyzer.new
 
-  analyzer.analyze("I'm feeling confident and excited this morning!")
-  => 2.0
+    analyzer.analyze("I'm feeling confident and excited this morning!")
+    => 2.0
+
 
 The library ships with two analysis strategies (you will liklely want to add your own domain-specific strategies):
 
-SentimentLib::Analysis::Strategies::BasicDictStrategy
+    SentimentLib::Analysis::Strategies::BasicDictStrategy
 
 and
 
-SentimentLib::Analysis::Strategies::FinancialDictStrategy
+    SentimentLib::Analysis::Strategies::FinancialDictStrategy
 
 The first (BasicDictStrategy) uses a dictionary file (at lib/sentiment_lib/data/analysis/basic_dict/words.txt) mapping words to decimal weights between -1.0 and 1.0.  It's analysis is the average of word weights for the supplied string.
 
