@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["nzaillian@gmail.com"]
   gem.description   = %q{A simple and extensible sentiment analysis gem.}
   gem.summary       = %q{Simple sentiment analysis.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/nzaillian/sentiment_lib"
   gem.add_dependency('rspec', '>= 2')
 
   gem.files         = `git ls-files`.split($/)
