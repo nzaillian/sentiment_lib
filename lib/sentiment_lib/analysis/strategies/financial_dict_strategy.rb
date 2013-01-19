@@ -5,7 +5,6 @@ module SentimentLib
     module Strategies
       class FinancialDictStrategy < ::SentimentLib::Analysis::Strategy
         @@mappings = nil
-        @@delims = [" ", "'", ";", ".", "-"]
 
         def initialize
           self.class._load_mappings if !@@mappings

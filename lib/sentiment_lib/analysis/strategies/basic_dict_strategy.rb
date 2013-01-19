@@ -5,7 +5,6 @@ module SentimentLib
     module Strategies
       class BasicDictStrategy < ::SentimentLib::Analysis::Strategy
         @@mappings = nil
-        @@delims = [" ", "'", ";", ".", "-"]
 
         def initialize
           self.class._load_mappings if !@@mappings
@@ -14,6 +13,27 @@ module SentimentLib
         def mappings
           @@mappings
         end
+
+        # weight is pure sum (not average)
+        def weigh(tokens, opts={})
+          valid_tokens = tokens.delete_if { |token|
+            mappings[token] == nil
+          }
+
+          return 0 if valid_tokens.length == 0
+
+          sum = 0
+
+          valid_tokens.each { |token| 
+            sum += mappings[token]
+          }
+
+          if opts[:average] == true
+            sum / valid_tokens.length
+          else
+            sum
+          end
+        end         
 
         private
 

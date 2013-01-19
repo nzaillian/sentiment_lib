@@ -6,10 +6,10 @@ require 'sentiment_lib/version'
 Gem::Specification.new do |gem|
   gem.name          = "sentiment_lib"
   gem.version       = SentimentLib::VERSION
-  gem.authors       = ["Nicholas Zaillian"]
+  gem.authors       = ["nzaillian"]
   gem.email         = ["nzaillian@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{A simple and extensible sentiment analysis gem.}
+  gem.summary       = %q{Simple sentiment analysis.}
   gem.homepage      = ""
   gem.add_dependency('rspec', '>= 2')
 
