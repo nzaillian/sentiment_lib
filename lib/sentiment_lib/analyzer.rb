@@ -9,7 +9,7 @@ module SentimentLib
     end
 
     def analyze(str, opts={})
-      tokens, sum = @strategy.tokenize(@strategy.normalize(str)), 0
+      tokens = @strategy.tokenize(@strategy.normalize(str))
 
       @strategy.weigh(tokens)
     end

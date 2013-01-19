@@ -78,7 +78,7 @@ create a subclass of SentimentLib::Analysis::Strategy
 
 You can then pass your strategy to new instances of SentimentLib::Analyzer:
 
-  analyzer = SentimentLib::Analyzer.new(:strategy => MyCustomStrategy.new)
+    analyzer = SentimentLib::Analyzer.new(:strategy => MyCustomStrategy.new)
 
 
 ## Contributing
