@@ -1,0 +1,1 @@
+require File.expand_path("../../lib/sentiment_lib", __FILE__)
