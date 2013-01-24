@@ -54,8 +54,8 @@ create a subclass of SentimentLib::Analysis::Strategy
       ex:
       
       {
-        happy => 1.0,
-        sad => -1.0
+        "happy" => 1.0,
+        "sad" => -1.0
       }
 
       The supplied strategies both load text files with
